@@ -1,0 +1,5810 @@
+{load_file("nrngui.hoc")}
+objectvar save_window_, rvp_
+objectvar scene_vector_[3]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+{pwman_place(0,0,0)}
+
+//Begin CellBuild[0]
+{
+load_file("celbild.hoc", "CellBuild")
+}
+{ocbox_ = new CellBuild(1)}
+{object_push(ocbox_)}
+{
+version(5.7)
+continuous = 1
+}
+{object_push(topol)}
+{
+first = 0
+slist.remove_all()
+sname = "bo4"
+objref tobj
+}
+{
+tobj = new CellBuildSection("soma",0, 0, tobj, 0) slist.append(tobj)
+  tobj.position(0,0,15,0) tobj.lx=7.5 tobj.ly=0 tobj.i3d=0
+tobj = new CellBuildSection("ak1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(0)
+  tobj.position(15,0,15,45) tobj.lx=15 tobj.ly=22.5 tobj.i3d=0
+tobj = new CellBuildSection("ak2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(1)
+  tobj.position(15,45,15,90) tobj.lx=15 tobj.ly=67.5 tobj.i3d=0
+tobj = new CellBuildSection("ak3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(2)
+  tobj.position(15,90,15,135) tobj.lx=15 tobj.ly=112.5 tobj.i3d=0
+tobj = new CellBuildSection("ak4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(3)
+  tobj.position(15,135,15,165) tobj.lx=15 tobj.ly=150 tobj.i3d=0
+tobj = new CellBuildSection("ak5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(4)
+  tobj.position(15,165,15,210) tobj.lx=15 tobj.ly=187.5 tobj.i3d=0
+tobj = new CellBuildSection("ak6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(5)
+  tobj.position(15,210,15,240) tobj.lx=15 tobj.ly=225 tobj.i3d=0
+tobj = new CellBuildSection("ak7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(6)
+  tobj.position(15,240,15,285) tobj.lx=15 tobj.ly=262.5 tobj.i3d=0
+tobj = new CellBuildSection("ak8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(7)
+  tobj.position(15,285,15,330) tobj.lx=15 tobj.ly=307.5 tobj.i3d=0
+tobj = new CellBuildSection("ak9",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(8)
+  tobj.position(15,330,15,375) tobj.lx=15 tobj.ly=352.5 tobj.i3d=0
+tobj = new CellBuildSection("ak10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(9)
+  tobj.position(15,375,15,420) tobj.lx=15 tobj.ly=397.5 tobj.i3d=0
+tobj = new CellBuildSection("aik1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(10)
+  tobj.position(15,420,60,465) tobj.lx=37.5 tobj.ly=442.5 tobj.i3d=0
+tobj = new CellBuildSection("aik2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(11)
+  tobj.position(60,465,90,495) tobj.lx=75 tobj.ly=480 tobj.i3d=0
+tobj = new CellBuildSection("aik3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(12)
+  tobj.position(90,495,150,555) tobj.lx=120 tobj.ly=525 tobj.i3d=0
+tobj = new CellBuildSection("aik4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(13)
+  tobj.position(150,555,195,600) tobj.lx=172.5 tobj.ly=577.5 tobj.i3d=0
+tobj = new CellBuildSection("aik5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(14)
+  tobj.position(195,600,255,660) tobj.lx=225 tobj.ly=630 tobj.i3d=0
+tobj = new CellBuildSection("aik6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(15)
+  tobj.position(255,660,300,705) tobj.lx=277.5 tobj.ly=682.5 tobj.i3d=0
+tobj = new CellBuildSection("aik6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(16)
+  tobj.position(300,705,345,750) tobj.lx=322.5 tobj.ly=727.5 tobj.i3d=0
+tobj = new CellBuildSection("aik7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(17)
+  tobj.position(345,750,420,825) tobj.lx=382.5 tobj.ly=787.5 tobj.i3d=0
+tobj = new CellBuildSection("adk1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(10)
+  tobj.position(15,420,-45,465) tobj.lx=-15 tobj.ly=442.5 tobj.i3d=0
+tobj = new CellBuildSection("adk2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(19)
+  tobj.position(-45,465,-135,525) tobj.lx=-105 tobj.ly=502.5 tobj.i3d=0
+tobj = new CellBuildSection("adk3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(20)
+  tobj.position(-135,525,-195,570) tobj.lx=-172.5 tobj.ly=547.5 tobj.i3d=0
+tobj = new CellBuildSection("adk4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(21)
+  tobj.position(-195,570,-270,630) tobj.lx=-232.5 tobj.ly=607.5 tobj.i3d=0
+tobj = new CellBuildSection("adk5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(22)
+  tobj.position(-270,630,-345,690) tobj.lx=-300 tobj.ly=660 tobj.i3d=0
+tobj = new CellBuildSection("adk5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(23)
+  tobj.position(-345,690,-420,750) tobj.lx=-382.5 tobj.ly=720 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("adk6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(24)
+  tobj.position(-420,750,-480,795) tobj.lx=-442.5 tobj.ly=772.5 tobj.i3d=0
+tobj = new CellBuildSection("adk7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(25)
+  tobj.position(-480,795,-555,855) tobj.lx=-525 tobj.ly=832.5 tobj.i3d=0
+tobj = new CellBuildSection("as1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(1)
+  tobj.position(15,45,195,45) tobj.lx=105 tobj.ly=45 tobj.i3d=0
+tobj = new CellBuildSection("as2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(2)
+  tobj.position(15,90,195,90) tobj.lx=105 tobj.ly=90 tobj.i3d=0
+tobj = new CellBuildSection("as3a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(3)
+  tobj.position(15,135,195,135) tobj.lx=105 tobj.ly=135 tobj.i3d=0
+tobj = new CellBuildSection("as3b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(29)
+  tobj.position(195,135,360,135) tobj.lx=277.5 tobj.ly=135 tobj.i3d=0
+tobj = new CellBuildSection("as4a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(4)
+  tobj.position(15,165,255,165) tobj.lx=135 tobj.ly=165 tobj.i3d=0
+tobj = new CellBuildSection("as4b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(31)
+  tobj.position(255,165,360,165) tobj.lx=307.5 tobj.ly=165 tobj.i3d=0
+tobj = new CellBuildSection("as4c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(32)
+  tobj.position(360,165,480,165) tobj.lx=420 tobj.ly=165 tobj.i3d=0
+tobj = new CellBuildSection("as5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(5)
+  tobj.position(15,210,195,210) tobj.lx=105 tobj.ly=210 tobj.i3d=0
+tobj = new CellBuildSection("as6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(6)
+  tobj.position(15,240,180,240) tobj.lx=97.5 tobj.ly=240 tobj.i3d=0
+tobj = new CellBuildSection("as6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(35)
+  tobj.position(180,240,300,240) tobj.lx=240 tobj.ly=240 tobj.i3d=0
+tobj = new CellBuildSection("as7a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(7)
+  tobj.position(15,285,180,285) tobj.lx=97.5 tobj.ly=285 tobj.i3d=0
+tobj = new CellBuildSection("as7b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(37)
+  tobj.position(180,285,300,285) tobj.lx=240 tobj.ly=285 tobj.i3d=0
+tobj = new CellBuildSection("as8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(8)
+  tobj.position(15,330,180,330) tobj.lx=97.5 tobj.ly=330 tobj.i3d=0
+tobj = new CellBuildSection("as9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(9)
+  tobj.position(15,375,150,375) tobj.lx=82.5 tobj.ly=375 tobj.i3d=0
+tobj = new CellBuildSection("as9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(40)
+  tobj.position(150,375,255,375) tobj.lx=202.5 tobj.ly=375 tobj.i3d=0
+tobj = new CellBuildSection("as9c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(41)
+  tobj.position(255,375,360,375) tobj.lx=307.5 tobj.ly=375 tobj.i3d=0
+tobj = new CellBuildSection("as9d",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(42)
+  tobj.position(360,375,480,375) tobj.lx=420 tobj.ly=375 tobj.i3d=0
+tobj = new CellBuildSection("as10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(11)
+  tobj.position(60,465,-15,525) tobj.lx=22.5 tobj.ly=495 tobj.i3d=0
+tobj = new CellBuildSection("as11a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(19)
+  tobj.position(-45,465,-120,390) tobj.lx=-82.5 tobj.ly=427.5 tobj.i3d=0
+tobj = new CellBuildSection("as11b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(45)
+  tobj.position(-120,390,-180,330) tobj.lx=-150 tobj.ly=360 tobj.i3d=0
+tobj = new CellBuildSection("as12a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(12)
+  tobj.position(90,495,30,555) tobj.lx=60 tobj.ly=525 tobj.i3d=0
+tobj = new CellBuildSection("as12b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(47)
+  tobj.position(30,555,-45,630) tobj.lx=0 tobj.ly=585 tobj.i3d=0
+tobj = new CellBuildSection("as13a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(20)
+  tobj.position(-135,525,-210,450) tobj.lx=-172.5 tobj.ly=487.5 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("as13b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(49)
+  tobj.position(-210,450,-270,390) tobj.lx=-240 tobj.ly=420 tobj.i3d=0
+tobj = new CellBuildSection("as14a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(21)
+  tobj.position(-195,570,-270,495) tobj.lx=-232.5 tobj.ly=532.5 tobj.i3d=0
+tobj = new CellBuildSection("as14b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(51)
+  tobj.position(-270,495,-345,420) tobj.lx=-307.5 tobj.ly=457.5 tobj.i3d=0
+tobj = new CellBuildSection("as15a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(13)
+  tobj.position(150,555,30,675) tobj.lx=90 tobj.ly=615 tobj.i3d=0
+tobj = new CellBuildSection("as15b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(53)
+  tobj.position(30,675,-60,765) tobj.lx=-30 tobj.ly=727.5 tobj.i3d=0
+tobj = new CellBuildSection("as16a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(14)
+  tobj.position(195,600,120,675) tobj.lx=157.5 tobj.ly=630 tobj.i3d=0
+tobj = new CellBuildSection("as16b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(55)
+  tobj.position(120,675,45,750) tobj.lx=82.5 tobj.ly=712.5 tobj.i3d=0
+tobj = new CellBuildSection("as17a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(22)
+  tobj.position(-270,630,-345,555) tobj.lx=-307.5 tobj.ly=592.5 tobj.i3d=0
+tobj = new CellBuildSection("as17b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(57)
+  tobj.position(-345,555,-420,480) tobj.lx=-382.5 tobj.ly=517.5 tobj.i3d=0
+tobj = new CellBuildSection("as18a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(15)
+  tobj.position(255,660,180,735) tobj.lx=217.5 tobj.ly=697.5 tobj.i3d=0
+tobj = new CellBuildSection("as18b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(59)
+  tobj.position(180,735,105,810) tobj.lx=142.5 tobj.ly=772.5 tobj.i3d=0
+tobj = new CellBuildSection("as19a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(24)
+  tobj.position(-420,750,-510,660) tobj.lx=-465 tobj.ly=705 tobj.i3d=0
+tobj = new CellBuildSection("as19b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(61)
+  tobj.position(-510,660,-570,600) tobj.lx=-540 tobj.ly=630 tobj.i3d=0
+tobj = new CellBuildSection("as20",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(25)
+  tobj.position(-480,795,-540,735) tobj.lx=-510 tobj.ly=765 tobj.i3d=0
+tobj = new CellBuildSection("as21a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(17)
+  tobj.position(345,750,255,840) tobj.lx=300 tobj.ly=795 tobj.i3d=0
+tobj = new CellBuildSection("as21b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(64)
+  tobj.position(255,840,165,930) tobj.lx=210 tobj.ly=885 tobj.i3d=0
+tobj = new CellBuildSection("as22a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(18)
+  tobj.position(420,825,330,915) tobj.lx=375 tobj.ly=870 tobj.i3d=0
+tobj = new CellBuildSection("as22b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(66)
+  tobj.position(330,915,270,975) tobj.lx=300 tobj.ly=945 tobj.i3d=0
+tobj = new CellBuildSection("as22c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(67)
+  tobj.position(270,975,195,1050) tobj.lx=232.5 tobj.ly=1012.5 tobj.i3d=0
+tobj = new CellBuildSection("as22d",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(68)
+  tobj.position(195,1050,135,1110) tobj.lx=165 tobj.ly=1080 tobj.i3d=0
+tobj = new CellBuildSection("as23a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(18)
+  tobj.position(420,825,510,735) tobj.lx=465 tobj.ly=780 tobj.i3d=0
+tobj = new CellBuildSection("as23b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(70)
+  tobj.position(510,735,585,660) tobj.lx=547.5 tobj.ly=697.5 tobj.i3d=0
+tobj = new CellBuildSection("as23c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(71)
+  tobj.position(585,660,660,585) tobj.lx=622.5 tobj.ly=622.5 tobj.i3d=0
+tobj = new CellBuildSection("as24a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(26)
+  tobj.position(-555,855,-630,780) tobj.lx=-592.5 tobj.ly=817.5 tobj.i3d=0
+tobj = new CellBuildSection("as24b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(73)
+  tobj.position(-630,780,-720,690) tobj.lx=-675 tobj.ly=735 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("as24c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(74)
+  tobj.position(-720,690,-780,630) tobj.lx=-750 tobj.ly=660 tobj.i3d=0
+tobj = new CellBuildSection("as25a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(26)
+  tobj.position(-555,855,-450,960) tobj.lx=-502.5 tobj.ly=907.5 tobj.i3d=0
+tobj = new CellBuildSection("as25b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(76)
+  tobj.position(-450,960,-390,1020) tobj.lx=-420 tobj.ly=990 tobj.i3d=0
+tobj = new CellBuildSection("as25c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(77)
+  tobj.position(-390,1020,-300,1110) tobj.lx=-345 tobj.ly=1065 tobj.i3d=0
+tobj = new CellBuildSection("as25d",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(78)
+  tobj.position(-300,1110,-225,1185) tobj.lx=-262.5 tobj.ly=1147.5 tobj.i3d=0
+tobj = new CellBuildSection("at1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(27)
+  tobj.position(195,45,255,-15) tobj.lx=225 tobj.ly=15 tobj.i3d=0
+tobj = new CellBuildSection("at2a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(27)
+  tobj.position(195,45,240,75) tobj.lx=217.5 tobj.ly=60 tobj.i3d=0
+tobj = new CellBuildSection("at2b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(81)
+  tobj.position(240,75,270,90) tobj.lx=255 tobj.ly=82.5 tobj.i3d=0
+tobj = new CellBuildSection("at3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(28)
+  tobj.position(195,90,210,75) tobj.lx=202.5 tobj.ly=82.5 tobj.i3d=0
+tobj = new CellBuildSection("at4a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(28)
+  tobj.position(195,90,225,105) tobj.lx=210 tobj.ly=97.5 tobj.i3d=0
+tobj = new CellBuildSection("at4b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(84)
+  tobj.position(225,105,255,120) tobj.lx=240 tobj.ly=112.5 tobj.i3d=0
+tobj = new CellBuildSection("at4c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(85)
+  tobj.position(255,120,285,135) tobj.lx=270 tobj.ly=127.5 tobj.i3d=0
+tobj = new CellBuildSection("at5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(34)
+  tobj.position(195,210,225,195) tobj.lx=210 tobj.ly=202.5 tobj.i3d=0
+tobj = new CellBuildSection("at6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(34)
+  tobj.position(195,210,225,225) tobj.lx=210 tobj.ly=217.5 tobj.i3d=0
+tobj = new CellBuildSection("at6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(88)
+  tobj.position(225,225,285,255) tobj.lx=255 tobj.ly=240 tobj.i3d=0
+tobj = new CellBuildSection("at6c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(89)
+  tobj.position(285,255,315,270) tobj.lx=300 tobj.ly=262.5 tobj.i3d=0
+tobj = new CellBuildSection("at6d",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(90)
+  tobj.position(315,270,345,285) tobj.lx=330 tobj.ly=277.5 tobj.i3d=0
+tobj = new CellBuildSection("at7a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(39)
+  tobj.position(180,330,210,315) tobj.lx=195 tobj.ly=322.5 tobj.i3d=0
+tobj = new CellBuildSection("at7b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(92)
+  tobj.position(210,315,240,300) tobj.lx=225 tobj.ly=307.5 tobj.i3d=0
+tobj = new CellBuildSection("at7c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(93)
+  tobj.position(240,300,300,270) tobj.lx=270 tobj.ly=285 tobj.i3d=0
+tobj = new CellBuildSection("at8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(39)
+  tobj.position(180,330,225,345) tobj.lx=202.5 tobj.ly=337.5 tobj.i3d=0
+tobj = new CellBuildSection("at9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(44)
+  tobj.position(-15,525,-15,570) tobj.lx=-15 tobj.ly=547.5 tobj.i3d=0
+tobj = new CellBuildSection("at9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(96)
+  tobj.position(-15,570,-15,645) tobj.lx=-15 tobj.ly=607.5 tobj.i3d=0
+tobj = new CellBuildSection("at10a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(44)
+  tobj.position(-15,525,-75,540) tobj.lx=-45 tobj.ly=532.5 tobj.i3d=0
+tobj = new CellBuildSection("at10b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(98)
+  tobj.position(-75,540,-135,555) tobj.lx=-105 tobj.ly=547.5 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("at11a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(69)
+  tobj.position(135,1110,135,1155) tobj.lx=135 tobj.ly=1132.5 tobj.i3d=0
+tobj = new CellBuildSection("at11b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(100)
+  tobj.position(135,1155,135,1200) tobj.lx=135 tobj.ly=1177.5 tobj.i3d=0
+tobj = new CellBuildSection("at12",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(69)
+  tobj.position(135,1110,75,1110) tobj.lx=105 tobj.ly=1110 tobj.i3d=0
+tobj = new CellBuildSection("at13a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(72)
+  tobj.position(660,585,720,585) tobj.lx=690 tobj.ly=585 tobj.i3d=0
+tobj = new CellBuildSection("at13b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(103)
+  tobj.position(720,585,780,585) tobj.lx=750 tobj.ly=585 tobj.i3d=0
+tobj = new CellBuildSection("at13c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(104)
+  tobj.position(780,585,825,585) tobj.lx=802.5 tobj.ly=585 tobj.i3d=0
+tobj = new CellBuildSection("at14a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(72)
+  tobj.position(660,585,660,540) tobj.lx=660 tobj.ly=562.5 tobj.i3d=0
+tobj = new CellBuildSection("at14b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(106)
+  tobj.position(660,540,660,510) tobj.lx=660 tobj.ly=525 tobj.i3d=0
+tobj = new CellBuildSection("at15",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(79)
+  tobj.position(-225,1185,-150,1185) tobj.lx=-187.5 tobj.ly=1185 tobj.i3d=0
+tobj = new CellBuildSection("at16",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(79)
+  tobj.position(-225,1185,-225,1230) tobj.lx=-225 tobj.ly=1207.5 tobj.i3d=0
+tobj = new CellBuildSection("ac7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(102)
+  tobj.position(75,1110,60,1080) tobj.lx=67.5 tobj.ly=1095 tobj.i3d=0
+tobj = new CellBuildSection("ac8a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(102)
+  tobj.position(75,1110,60,1140) tobj.lx=67.5 tobj.ly=1125 tobj.i3d=0
+tobj = new CellBuildSection("ac8b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(111)
+  tobj.position(60,1140,45,1170) tobj.lx=52.5 tobj.ly=1155 tobj.i3d=0
+tobj = new CellBuildSection("ac9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(107)
+  tobj.position(660,510,630,480) tobj.lx=645 tobj.ly=495 tobj.i3d=0
+tobj = new CellBuildSection("ac9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(113)
+  tobj.position(630,480,600,450) tobj.lx=615 tobj.ly=465 tobj.i3d=0
+tobj = new CellBuildSection("ac10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(107)
+  tobj.position(660,510,690,480) tobj.lx=675 tobj.ly=495 tobj.i3d=0
+tobj = new CellBuildSection("ac11",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(108)
+  tobj.position(-150,1185,-105,1155) tobj.lx=-127.5 tobj.ly=1170 tobj.i3d=0
+tobj = new CellBuildSection("ac12",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(108)
+  tobj.position(-150,1185,-105,1200) tobj.lx=-127.5 tobj.ly=1192.5 tobj.i3d=0
+tobj = new CellBuildSection("ac13",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(109)
+  tobj.position(-225,1230,-195,1260) tobj.lx=-210 tobj.ly=1245 tobj.i3d=0
+tobj = new CellBuildSection("ac14a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(109)
+  tobj.position(-225,1230,-255,1260) tobj.lx=-240 tobj.ly=1245 tobj.i3d=0
+tobj = new CellBuildSection("ac14b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(119)
+  tobj.position(-255,1260,-285,1290) tobj.lx=-270 tobj.ly=1275 tobj.i3d=0
+tobj = new CellBuildSection("aq3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(110)
+  tobj.position(60,1080,15,1065) tobj.lx=37.5 tobj.ly=1072.5 tobj.i3d=0
+tobj = new CellBuildSection("aq4a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(110)
+  tobj.position(60,1080,75,1050) tobj.lx=67.5 tobj.ly=1065 tobj.i3d=0
+tobj = new CellBuildSection("aq4b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(122)
+  tobj.position(75,1050,90,1020) tobj.lx=82.5 tobj.ly=1035 tobj.i3d=0
+tobj = new CellBuildSection("aq5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(118)
+  tobj.position(-195,1260,-165,1260) tobj.lx=-180 tobj.ly=1260 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("aq5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(124)
+  tobj.position(-165,1260,-135,1260) tobj.lx=-150 tobj.ly=1260 tobj.i3d=0
+tobj = new CellBuildSection("aq6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(118)
+  tobj.position(-195,1260,-195,1290) tobj.lx=-195 tobj.ly=1275 tobj.i3d=0
+tobj = new CellBuildSection("ax1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(121)
+  tobj.position(15,1065,0,1035) tobj.lx=7.5 tobj.ly=1050 tobj.i3d=0
+tobj = new CellBuildSection("ax1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(127)
+  tobj.position(0,1035,-15,1005) tobj.lx=-7.5 tobj.ly=1020 tobj.i3d=0
+tobj = new CellBuildSection("ax2a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(121)
+  tobj.position(15,1065,-30,1080) tobj.lx=-7.5 tobj.ly=1072.5 tobj.i3d=0
+tobj = new CellBuildSection("ax2b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(129)
+  tobj.position(-30,1080,-75,1095) tobj.lx=-52.5 tobj.ly=1087.5 tobj.i3d=0
+tobj = new CellBuildSection("ax3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(123)
+  tobj.position(90,1020,75,990) tobj.lx=82.5 tobj.ly=1005 tobj.i3d=0
+tobj = new CellBuildSection("ax4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(123)
+  tobj.position(90,1020,120,1005) tobj.lx=105 tobj.ly=1012.5 tobj.i3d=0
+tobj = new CellBuildSection("ax5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(126)
+  tobj.position(-195,1290,-165,1320) tobj.lx=-180 tobj.ly=1305 tobj.i3d=0
+tobj = new CellBuildSection("ax6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(126)
+  tobj.position(-195,1290,-225,1320) tobj.lx=-210 tobj.ly=1305 tobj.i3d=0
+tobj = new CellBuildSection("bs1",0, 0, tobj, 0) slist.append(tobj)
+tobj.parent=slist.object(0)
+  tobj.position(0,0,-345,-270) tobj.lx=-285 tobj.ly=-217.5 tobj.i3d=0
+tobj = new CellBuildSection("bs2",0, 0, tobj, 0) slist.append(tobj)
+tobj.parent=slist.object(0)
+  tobj.position(0,0,360,-285) tobj.lx=285 tobj.ly=-225 tobj.i3d=0
+tobj = new CellBuildSection("ac1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(83)
+  tobj.position(210,75,240,90) tobj.lx=225 tobj.ly=82.5 tobj.i3d=0
+tobj = new CellBuildSection("ac1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(137)
+  tobj.position(240,90,270,105) tobj.lx=255 tobj.ly=97.5 tobj.i3d=0
+tobj = new CellBuildSection("ac1c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(138)
+  tobj.position(270,105,300,120) tobj.lx=285 tobj.ly=112.5 tobj.i3d=0
+tobj = new CellBuildSection("ac2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(83)
+  tobj.position(210,75,405,15) tobj.lx=367.5 tobj.ly=30 tobj.i3d=0
+tobj = new CellBuildSection("ac3a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(87)
+  tobj.position(225,195,285,225) tobj.lx=255 tobj.ly=210 tobj.i3d=0
+tobj = new CellBuildSection("ac3b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(141)
+  tobj.position(285,225,345,255) tobj.lx=315 tobj.ly=240 tobj.i3d=0
+tobj = new CellBuildSection("ac4a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(87)
+  tobj.position(225,195,300,180) tobj.lx=262.5 tobj.ly=187.5 tobj.i3d=0
+tobj = new CellBuildSection("ac4b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(143)
+  tobj.position(300,180,390,150) tobj.lx=345 tobj.ly=165 tobj.i3d=0
+tobj = new CellBuildSection("ac5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(95)
+  tobj.position(225,345,270,330) tobj.lx=247.5 tobj.ly=337.5 tobj.i3d=0
+tobj = new CellBuildSection("ac5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(145)
+  tobj.position(270,330,315,315) tobj.lx=292.5 tobj.ly=322.5 tobj.i3d=0
+tobj = new CellBuildSection("ac6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(95)
+  tobj.position(225,345,270,360) tobj.lx=247.5 tobj.ly=352.5 tobj.i3d=0
+tobj = new CellBuildSection("ac6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(147)
+  tobj.position(270,360,360,390) tobj.lx=330 tobj.ly=375 tobj.i3d=0
+tobj = new CellBuildSection("ac6c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(148)
+  tobj.position(360,390,450,420) tobj.lx=405 tobj.ly=405 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("aq1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(140)
+  tobj.position(405,15,450,-45) tobj.lx=427.5 tobj.ly=-15 tobj.i3d=0
+tobj = new CellBuildSection("aq2a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(140)
+  tobj.position(405,15,435,45) tobj.lx=420 tobj.ly=30 tobj.i3d=0
+tobj = new CellBuildSection("aq2b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(151)
+  tobj.position(435,45,465,75) tobj.lx=450 tobj.ly=60 tobj.i3d=0
+tobj = new CellBuildSection("bt1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(135)
+  tobj.position(-345,-270,-570,-285) tobj.lx=-457.5 tobj.ly=-277.5 tobj.i3d=0
+tobj = new CellBuildSection("bt1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(153)
+  tobj.position(-570,-285,-780,-300) tobj.lx=-675 tobj.ly=-292.5 tobj.i3d=0
+tobj = new CellBuildSection("bt2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(135)
+  tobj.position(-345,-270,-330,-465) tobj.lx=-337.5 tobj.ly=-367.5 tobj.i3d=0
+tobj = new CellBuildSection("bt3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(136)
+  tobj.position(360,-285,390,-480) tobj.lx=382.5 tobj.ly=-382.5 tobj.i3d=0
+tobj = new CellBuildSection("bc1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(154)
+  tobj.position(-780,-300,-855,-405) tobj.lx=-817.5 tobj.ly=-352.5 tobj.i3d=0
+tobj = new CellBuildSection("bc1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(157)
+  tobj.position(-855,-405,-930,-525) tobj.lx=-892.5 tobj.ly=-465 tobj.i3d=0
+tobj = new CellBuildSection("bc2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(154)
+  tobj.position(-780,-300,-900,-180) tobj.lx=-840 tobj.ly=-240 tobj.i3d=0
+tobj = new CellBuildSection("bc3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(155)
+  tobj.position(-330,-465,-435,-555) tobj.lx=-382.5 tobj.ly=-510 tobj.i3d=0
+tobj = new CellBuildSection("bc4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(155)
+  tobj.position(-330,-465,-225,-555) tobj.lx=-262.5 tobj.ly=-517.5 tobj.i3d=0
+tobj = new CellBuildSection("bc5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(156)
+  tobj.position(390,-480,270,-570) tobj.lx=330 tobj.ly=-525 tobj.i3d=0
+tobj = new CellBuildSection("bc5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(162)
+  tobj.position(270,-570,150,-660) tobj.lx=217.5 tobj.ly=-615 tobj.i3d=0
+tobj = new CellBuildSection("bc6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(156)
+  tobj.position(390,-480,525,-615) tobj.lx=457.5 tobj.ly=-547.5 tobj.i3d=0
+tobj = new CellBuildSection("bc6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(164)
+  tobj.position(525,-615,615,-720) tobj.lx=570 tobj.ly=-667.5 tobj.i3d=0
+tobj = new CellBuildSection("bt4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(136)
+  tobj.position(360,-285,555,-270) tobj.lx=457.5 tobj.ly=-277.5 tobj.i3d=0
+tobj = new CellBuildSection("bc7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(166)
+  tobj.position(555,-270,645,-375) tobj.lx=585.693 tobj.ly=-336.815 tobj.i3d=0
+tobj = new CellBuildSection("bc8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(166)
+  tobj.position(555,-270,645,-195) tobj.lx=600 tobj.ly=-232.5 tobj.i3d=0
+tobj = new CellBuildSection("bq1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(159)
+  tobj.position(-900,-180,-855,-45) tobj.lx=-877.5 tobj.ly=-112.5 tobj.i3d=0
+tobj = new CellBuildSection("bq1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(169)
+  tobj.position(-855,-45,-825,75) tobj.lx=-840 tobj.ly=15 tobj.i3d=0
+tobj = new CellBuildSection("bq2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(159)
+  tobj.position(-900,-180,-1035,-180) tobj.lx=-967.5 tobj.ly=-180 tobj.i3d=0
+tobj = new CellBuildSection("bq3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(160)
+  tobj.position(-435,-555,-585,-570) tobj.lx=-510 tobj.ly=-562.5 tobj.i3d=0
+tobj = new CellBuildSection("bq4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(160)
+  tobj.position(-435,-555,-420,-660) tobj.lx=-427.5 tobj.ly=-607.5 tobj.i3d=0
+tobj = new CellBuildSection("bq5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(161)
+  tobj.position(-225,-555,-240,-675) tobj.lx=-232.5 tobj.ly=-615 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("bq6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(161)
+  tobj.position(-225,-555,-105,-555) tobj.lx=-165 tobj.ly=-555 tobj.i3d=0
+tobj = new CellBuildSection("bq6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(175)
+  tobj.position(-105,-555,0,-555) tobj.lx=-52.5 tobj.ly=-555 tobj.i3d=0
+tobj = new CellBuildSection("bq7a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(167)
+  tobj.position(645,-375,600,-480) tobj.lx=622.5 tobj.ly=-427.5 tobj.i3d=0
+tobj = new CellBuildSection("bq7b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(177)
+  tobj.position(600,-480,555,-570) tobj.lx=577.5 tobj.ly=-525 tobj.i3d=0
+tobj = new CellBuildSection("bq8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(167)
+  tobj.position(645,-375,795,-405) tobj.lx=720 tobj.ly=-390 tobj.i3d=0
+tobj = new CellBuildSection("bq9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(168)
+  tobj.position(645,-195,645,-120) tobj.lx=645 tobj.ly=-157.5 tobj.i3d=0
+tobj = new CellBuildSection("bq9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(180)
+  tobj.position(645,-120,645,-45) tobj.lx=645 tobj.ly=-82.5 tobj.i3d=0
+tobj = new CellBuildSection("bq10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(168)
+  tobj.position(645,-195,765,-210) tobj.lx=689.316 tobj.ly=-212.115 tobj.i3d=0
+tobj = new CellBuildSection("bx1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(172)
+  tobj.position(-585,-570,-660,-495) tobj.lx=-622.5 tobj.ly=-532.5 tobj.i3d=0
+tobj = new CellBuildSection("bx2a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(172)
+  tobj.position(-585,-570,-645,-675) tobj.lx=-615 tobj.ly=-622.5 tobj.i3d=0
+tobj = new CellBuildSection("bx2b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(184)
+  tobj.position(-645,-675,-705,-795) tobj.lx=-675 tobj.ly=-735 tobj.i3d=0
+tobj = new CellBuildSection("bx3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(173)
+  tobj.position(-420,-660,-510,-735) tobj.lx=-465 tobj.ly=-697.5 tobj.i3d=0
+tobj = new CellBuildSection("bx4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(173)
+  tobj.position(-420,-660,-330,-705) tobj.lx=-375 tobj.ly=-682.5 tobj.i3d=0
+tobj = new CellBuildSection("bx5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(174)
+  tobj.position(-240,-675,-330,-795) tobj.lx=-267.232 tobj.ly=-743.357 tobj.i3d=0
+tobj = new CellBuildSection("bx6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(174)
+  tobj.position(-240,-675,-165,-810) tobj.lx=-202.5 tobj.ly=-742.5 tobj.i3d=0
+tobj = new CellBuildSection("bx7a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(178)
+  tobj.position(555,-570,690,-660) tobj.lx=622.5 tobj.ly=-615 tobj.i3d=0
+tobj = new CellBuildSection("bx7b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(190)
+  tobj.position(690,-660,795,-735) tobj.lx=742.5 tobj.ly=-697.5 tobj.i3d=0
+tobj = new CellBuildSection("bx8a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(178)
+  tobj.position(555,-570,720,-555) tobj.lx=637.5 tobj.ly=-562.5 tobj.i3d=0
+tobj = new CellBuildSection("bx8b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(192)
+  tobj.position(720,-555,870,-540) tobj.lx=795 tobj.ly=-547.5 tobj.i3d=0
+tobj = new CellBuildSection("bx9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(179)
+  tobj.position(795,-405,945,-300) tobj.lx=870 tobj.ly=-352.5 tobj.i3d=0
+tobj = new CellBuildSection("bx9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(194)
+  tobj.position(945,-300,1050,-240) tobj.lx=997.5 tobj.ly=-270 tobj.i3d=0
+tobj = new CellBuildSection("bx10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(179)
+  tobj.position(795,-405,960,-495) tobj.lx=877.5 tobj.ly=-450 tobj.i3d=0
+tobj = new CellBuildSection("bx11a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(182)
+  tobj.position(765,-210,840,-120) tobj.lx=802.5 tobj.ly=-165 tobj.i3d=0
+tobj = new CellBuildSection("bx11b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(197)
+  tobj.position(840,-120,930,-15) tobj.lx=885 tobj.ly=-67.5 tobj.i3d=0
+tobj = new CellBuildSection("bx11c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(198)
+  tobj.position(930,-15,1005,75) tobj.lx=967.5 tobj.ly=30 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("bx12a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(182)
+  tobj.position(765,-210,915,-180) tobj.lx=840 tobj.ly=-195 tobj.i3d=0
+tobj = new CellBuildSection("bx12b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(200)
+  tobj.position(915,-180,1080,-150) tobj.lx=997.5 tobj.ly=-165 tobj.i3d=0
+tobj = new CellBuildSection("bp1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(183)
+  tobj.position(-660,-495,-750,-510) tobj.lx=-705 tobj.ly=-502.5 tobj.i3d=0
+tobj = new CellBuildSection("bp2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(183)
+  tobj.position(-660,-495,-645,-420) tobj.lx=-652.5 tobj.ly=-457.5 tobj.i3d=0
+tobj = new CellBuildSection("bp3a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(185)
+  tobj.position(-705,-795,-810,-840) tobj.lx=-757.5 tobj.ly=-817.5 tobj.i3d=0
+tobj = new CellBuildSection("bp3b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(204)
+  tobj.position(-810,-840,-900,-885) tobj.lx=-855 tobj.ly=-862.5 tobj.i3d=0
+tobj = new CellBuildSection("bp4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(185)
+  tobj.position(-705,-795,-675,-915) tobj.lx=-690 tobj.ly=-855 tobj.i3d=0
+tobj = new CellBuildSection("bp5",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(186)
+  tobj.position(-510,-735,-495,-810) tobj.lx=-502.5 tobj.ly=-772.5 tobj.i3d=0
+tobj = new CellBuildSection("bp6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(186)
+  tobj.position(-510,-735,-585,-750) tobj.lx=-547.5 tobj.ly=-742.5 tobj.i3d=0
+tobj = new CellBuildSection("bp6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(208)
+  tobj.position(-585,-750,-660,-765) tobj.lx=-622.5 tobj.ly=-757.5 tobj.i3d=0
+tobj = new CellBuildSection("bp7",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(187)
+  tobj.position(-330,-705,-285,-840) tobj.lx=-307.5 tobj.ly=-772.5 tobj.i3d=0
+tobj = new CellBuildSection("bp8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(187)
+  tobj.position(-330,-705,-285,-645) tobj.lx=-307.5 tobj.ly=-675 tobj.i3d=0
+tobj = new CellBuildSection("bp9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(188)
+  tobj.position(-330,-795,-405,-840) tobj.lx=-367.5 tobj.ly=-817.5 tobj.i3d=0
+tobj = new CellBuildSection("bp9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(212)
+  tobj.position(-405,-840,-480,-885) tobj.lx=-442.5 tobj.ly=-862.5 tobj.i3d=0
+tobj = new CellBuildSection("bp9c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(213)
+  tobj.position(-480,-885,-570,-915) tobj.lx=-525 tobj.ly=-900 tobj.i3d=0
+tobj = new CellBuildSection("bp10",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(188)
+  tobj.position(-330,-795,-285,-915) tobj.lx=-307.5 tobj.ly=-855 tobj.i3d=0
+tobj = new CellBuildSection("bp11a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(189)
+  tobj.position(-165,-810,-195,-915) tobj.lx=-180 tobj.ly=-862.5 tobj.i3d=0
+tobj = new CellBuildSection("bp11b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(216)
+  tobj.position(-195,-915,-225,-1035) tobj.lx=-210 tobj.ly=-975 tobj.i3d=0
+tobj = new CellBuildSection("bp11c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(217)
+  tobj.position(-225,-1035,-255,-1140) tobj.lx=-240 tobj.ly=-1087.5 tobj.i3d=0
+tobj = new CellBuildSection("bp12a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(189)
+  tobj.position(-165,-810,-60,-810) tobj.lx=-112.5 tobj.ly=-810 tobj.i3d=0
+tobj = new CellBuildSection("bp12b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(219)
+  tobj.position(-60,-810,90,-810) tobj.lx=15 tobj.ly=-810 tobj.i3d=0
+tobj = new CellBuildSection("bp13a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(196)
+  tobj.position(960,-495,990,-570) tobj.lx=975 tobj.ly=-532.5 tobj.i3d=0
+tobj = new CellBuildSection("bp13b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(221)
+  tobj.position(990,-570,1005,-645) tobj.lx=997.5 tobj.ly=-607.5 tobj.i3d=0
+tobj = new CellBuildSection("bp14a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(196)
+  tobj.position(960,-495,1080,-480) tobj.lx=1020 tobj.ly=-487.5 tobj.i3d=0
+tobj = new CellBuildSection("bp14b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(223)
+  tobj.position(1080,-480,1200,-465) tobj.lx=1140 tobj.ly=-472.5 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("bo1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(207)
+  tobj.position(-495,-810,-645,-960) tobj.lx=-570 tobj.ly=-885 tobj.i3d=0
+tobj = new CellBuildSection("bo1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(225)
+  tobj.position(-645,-960,-720,-1035) tobj.lx=-682.5 tobj.ly=-997.5 tobj.i3d=0
+tobj = new CellBuildSection("bo2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(207)
+  tobj.position(-495,-810,-360,-960) tobj.lx=-438.751 tobj.ly=-903.583 tobj.i3d=0
+tobj = new CellBuildSection("bo5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(210)
+  tobj.position(-285,-840,-135,-870) tobj.lx=-210 tobj.ly=-855 tobj.i3d=0
+tobj = new CellBuildSection("bo5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(228)
+  tobj.position(-135,-870,-45,-885) tobj.lx=-90 tobj.ly=-877.5 tobj.i3d=0
+tobj = new CellBuildSection("bo6",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(210)
+  tobj.position(-285,-840,-315,-930) tobj.lx=-300 tobj.ly=-885 tobj.i3d=0
+tobj = new CellBuildSection("bo7a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(211)
+  tobj.position(-285,-645,-315,-555) tobj.lx=-300 tobj.ly=-600 tobj.i3d=0
+tobj = new CellBuildSection("bo7b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(231)
+  tobj.position(-315,-555,-330,-495) tobj.lx=-322.5 tobj.ly=-525 tobj.i3d=0
+tobj = new CellBuildSection("bo7c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(232)
+  tobj.position(-330,-495,-360,-405) tobj.lx=-345 tobj.ly=-450 tobj.i3d=0
+tobj = new CellBuildSection("bo8",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(211)
+  tobj.position(-285,-645,-180,-645) tobj.lx=-208.678 tobj.ly=-651.977 tobj.i3d=0
+tobj = new CellBuildSection("bo9a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(215)
+  tobj.position(-285,-915,-300,-990) tobj.lx=-292.5 tobj.ly=-952.5 tobj.i3d=0
+tobj = new CellBuildSection("bo9b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(235)
+  tobj.position(-300,-990,-315,-1065) tobj.lx=-322.846 tobj.ly=-1026.91 tobj.i3d=0
+tobj = new CellBuildSection("bo9c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(236)
+  tobj.position(-315,-1065,-330,-1140) tobj.lx=-322.5 tobj.ly=-1102.5 tobj.i3d=0
+tobj = new CellBuildSection("bo10a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(215)
+  tobj.position(-285,-915,-180,-915) tobj.lx=-232.5 tobj.ly=-915 tobj.i3d=0
+tobj = new CellBuildSection("bo10b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(238)
+  tobj.position(-180,-915,-105,-915) tobj.lx=-142.5 tobj.ly=-915 tobj.i3d=0
+tobj = new CellBuildSection("bn1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(227)
+  tobj.position(-360,-960,-405,-1050) tobj.lx=-382.5 tobj.ly=-1005 tobj.i3d=0
+tobj = new CellBuildSection("bn2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(227)
+  tobj.position(-360,-960,-255,-945) tobj.lx=-307.5 tobj.ly=-952.5 tobj.i3d=0
+tobj = new CellBuildSection("bn3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(230)
+  tobj.position(-315,-930,-345,-930) tobj.lx=-330 tobj.ly=-930 tobj.i3d=0
+tobj = new CellBuildSection("bn4a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(230)
+  tobj.position(-315,-930,-270,-975) tobj.lx=-292.5 tobj.ly=-952.5 tobj.i3d=0
+tobj = new CellBuildSection("bn4b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(243)
+  tobj.position(-270,-975,-240,-1005) tobj.lx=-255 tobj.ly=-990 tobj.i3d=0
+tobj = new CellBuildSection("bn5a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(234)
+  tobj.position(-180,-645,-150,-690) tobj.lx=-165 tobj.ly=-667.5 tobj.i3d=0
+tobj = new CellBuildSection("bn5b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(245)
+  tobj.position(-150,-690,-120,-735) tobj.lx=-135 tobj.ly=-712.5 tobj.i3d=0
+tobj = new CellBuildSection("bn5c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(246)
+  tobj.position(-120,-735,-105,-765) tobj.lx=-112.5 tobj.ly=-750 tobj.i3d=0
+tobj = new CellBuildSection("bn6a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(234)
+  tobj.position(-180,-645,-150,-630) tobj.lx=-165 tobj.ly=-637.5 tobj.i3d=0
+tobj = new CellBuildSection("bn6b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(248)
+  tobj.position(-150,-630,-120,-615) tobj.lx=-135 tobj.ly=-622.5 tobj.i3d=0
+}
+{
+tobj = new CellBuildSection("AH",0, 0, tobj, 0) slist.append(tobj)
+tobj.parent=slist.object(0)
+  tobj.position(0,0,-105,45) tobj.lx=-37.5 tobj.ly=45 tobj.i3d=0
+tobj = new CellBuildSection("isa",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(250)
+  tobj.position(-105,45,-180,75) tobj.lx=-135 tobj.ly=75 tobj.i3d=0
+tobj = new CellBuildSection("isb",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(251)
+  tobj.position(-180,75,-315,120) tobj.lx=-270 tobj.ly=120 tobj.i3d=0
+tobj = new CellBuildSection("m1a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(252)
+  tobj.position(-315,120,-405,150) tobj.lx=-352.5 tobj.ly=150 tobj.i3d=0
+tobj = new CellBuildSection("m1b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(253)
+  tobj.position(-405,150,-540,195) tobj.lx=-487.5 tobj.ly=195 tobj.i3d=0
+tobj = new CellBuildSection("r1",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(254)
+  tobj.position(-540,195,-615,225) tobj.lx=-577.5 tobj.ly=210 tobj.i3d=0
+tobj = new CellBuildSection("m2a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(255)
+  tobj.position(-615,225,-690,255) tobj.lx=-652.5 tobj.ly=240 tobj.i3d=0
+tobj = new CellBuildSection("m2b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(256)
+  tobj.position(-690,255,-825,300) tobj.lx=-757.5 tobj.ly=277.5 tobj.i3d=0
+tobj = new CellBuildSection("m2c",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(257)
+  tobj.position(-825,300,-960,345) tobj.lx=-892.5 tobj.ly=322.5 tobj.i3d=0
+tobj = new CellBuildSection("r2",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(258)
+  tobj.position(-960,345,-1095,375) tobj.lx=-1027.5 tobj.ly=360 tobj.i3d=0
+tobj = new CellBuildSection("m3a",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(255)
+  tobj.position(-615,225,-615,315) tobj.lx=-615 tobj.ly=270 tobj.i3d=0
+tobj = new CellBuildSection("m3b",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(260)
+  tobj.position(-615,315,-615,420) tobj.lx=-615 tobj.ly=367.5 tobj.i3d=0
+tobj = new CellBuildSection("r3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(261)
+  tobj.position(-615,420,-615,525) tobj.lx=-615 tobj.ly=472.5 tobj.i3d=0
+tobj = new CellBuildSection("bo3",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(209)
+  tobj.position(-660,-765,-645,-825) tobj.lx=-629.066 tobj.ly=-801.028 tobj.i3d=0
+tobj = new CellBuildSection("bo4",0, 0, tobj, 1) slist.append(tobj)
+tobj.parent=slist.object(209)
+  tobj.position(-660,-765,-615,-720) tobj.lx=-623.35 tobj.ly=-713.865 tobj.i3d=0
+all_init()
+}
+for i=0, slist.count-1 {slist.object(i).rdses()}
+{object_pop()}
+{
+}
+{object_push(subsets)}
+{first = 0}
+{ tobj = snlist.object(0)}
+{tobj = new SNList("basal1List") snlist.append(tobj)}
+for i=0,69 tobj.add(bild.topol.slist.object(fscan()))
+135
+153
+154
+155
+157
+158
+159
+160
+161
+169
+170
+171
+172
+173
+174
+175
+176
+183
+184
+185
+186
+187
+188
+189
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+263
+264
+{tobj = new SNList("basal2List") snlist.append(tobj)}
+for i=0,30 tobj.add(bild.topol.slist.object(fscan()))
+136
+156
+162
+163
+164
+165
+166
+167
+168
+177
+178
+179
+180
+181
+182
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+221
+222
+223
+224
+{tobj = new SNList("apiList") snlist.append(tobj)}
+for i=0,149 tobj.add(bild.topol.slist.object(fscan()))
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+{tobj = new SNList("distalApi1List") snlist.append(tobj)}
+for i=0,37 tobj.add(bild.topol.slist.object(fscan()))
+19
+20
+21
+22
+23
+24
+25
+26
+45
+46
+49
+50
+51
+52
+57
+58
+61
+62
+63
+73
+74
+75
+76
+77
+78
+79
+108
+109
+116
+117
+118
+119
+120
+124
+125
+126
+133
+134
+{tobj = new SNList("distalApi2List") snlist.append(tobj)}
+for i=0,52 tobj.add(bild.topol.slist.object(fscan()))
+11
+12
+13
+14
+15
+16
+17
+18
+44
+47
+48
+53
+54
+55
+56
+59
+60
+64
+65
+66
+67
+68
+69
+70
+71
+72
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+110
+111
+112
+113
+114
+115
+121
+122
+123
+127
+128
+129
+130
+131
+132
+{tobj = new SNList("axonList") snlist.append(tobj)}
+for i=0,12 tobj.add(bild.topol.slist.object(fscan()))
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+{consist()}
+{object_pop()}
+{
+}
+{object_push(geom)}
+{
+first = 0
+tobj = new GeoSpec(4)
+tobj.value = 962
+bild.topol.slist.object(0).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(0).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.4
+bild.topol.slist.object(1).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 3.5
+bild.topol.slist.object(1).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(1).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(2).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 3.2
+bild.topol.slist.object(2).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(2).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.5
+bild.topol.slist.object(3).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 3
+bild.topol.slist.object(3).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(3).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 18.9
+bild.topol.slist.object(4).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.8
+bild.topol.slist.object(4).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(4).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.2
+bild.topol.slist.object(5).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.7
+bild.topol.slist.object(5).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(5).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.7
+bild.topol.slist.object(6).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.6
+bild.topol.slist.object(6).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(6).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 24.8
+bild.topol.slist.object(7).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.5
+bild.topol.slist.object(7).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(7).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 10.6
+bild.topol.slist.object(8).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.4
+bild.topol.slist.object(8).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(8).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44
+bild.topol.slist.object(9).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.4
+bild.topol.slist.object(9).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(9).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 37.7
+bild.topol.slist.object(10).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2.4
+bild.topol.slist.object(10).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(10).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 9.6
+bild.topol.slist.object(11).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(11).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(11).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 10.1
+bild.topol.slist.object(12).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(12).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(12).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20.2
+bild.topol.slist.object(13).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.9
+bild.topol.slist.object(13).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(13).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.1
+bild.topol.slist.object(14).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.8
+bild.topol.slist.object(14).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(14).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 15.5
+bild.topol.slist.object(15).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.7
+bild.topol.slist.object(15).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(15).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 47.2
+bild.topol.slist.object(16).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 1.6
+bild.topol.slist.object(16).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(16).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 47.2
+bild.topol.slist.object(17).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.6
+bild.topol.slist.object(17).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(17).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.7
+bild.topol.slist.object(18).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.5
+bild.topol.slist.object(18).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(18).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.1
+bild.topol.slist.object(19).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(19).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(19).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 15.5
+bild.topol.slist.object(20).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(20).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(20).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.2
+bild.topol.slist.object(21).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.9
+bild.topol.slist.object(21).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(21).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(22).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.8
+bild.topol.slist.object(22).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(22).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 43.3
+bild.topol.slist.object(23).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.7
+bild.topol.slist.object(23).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(23).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 43.3
+bild.topol.slist.object(24).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.7
+bild.topol.slist.object(24).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(24).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.1
+bild.topol.slist.object(25).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.6
+bild.topol.slist.object(25).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(25).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.5
+bild.topol.slist.object(26).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.5
+bild.topol.slist.object(26).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(26).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 26.6
+bild.topol.slist.object(27).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(27).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(27).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.2
+bild.topol.slist.object(28).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(28).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(28).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(29).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(29).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(29).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(30).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(30).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(30).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63
+bild.topol.slist.object(31).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(31).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(31).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63
+bild.topol.slist.object(32).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(32).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(32).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 63
+bild.topol.slist.object(33).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(33).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(33).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.7
+bild.topol.slist.object(34).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(34).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(34).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63.3
+bild.topol.slist.object(35).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(35).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(35).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63.3
+bild.topol.slist.object(36).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(36).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(36).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63.3
+bild.topol.slist.object(37).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(37).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(37).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 63.3
+bild.topol.slist.object(38).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 0.75
+bild.topol.slist.object(38).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(38).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.7
+bild.topol.slist.object(39).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(39).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(39).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55
+bild.topol.slist.object(40).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(40).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(40).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55
+bild.topol.slist.object(41).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(41).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(41).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55
+bild.topol.slist.object(42).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(42).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(42).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55
+bild.topol.slist.object(43).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(43).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(43).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.2
+bild.topol.slist.object(44).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(44).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(44).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 60
+bild.topol.slist.object(45).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(45).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(45).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 60
+bild.topol.slist.object(46).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(46).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(46).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.85
+bild.topol.slist.object(47).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(47).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(47).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.85
+bild.topol.slist.object(48).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(48).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(48).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70.5
+bild.topol.slist.object(49).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(49).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(49).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70.5
+bild.topol.slist.object(50).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(50).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(50).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.85
+bild.topol.slist.object(51).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(51).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(51).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.85
+bild.topol.slist.object(52).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(52).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(52).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 53.3
+bild.topol.slist.object(53).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(53).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(53).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 53.3
+bild.topol.slist.object(54).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(54).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(54).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70
+bild.topol.slist.object(55).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(55).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(55).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70
+bild.topol.slist.object(56).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(56).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(56).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56.65
+bild.topol.slist.object(57).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(57).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(57).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 56.65
+bild.topol.slist.object(58).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(58).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(58).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 67.7
+bild.topol.slist.object(59).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(59).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(59).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 67.7
+bild.topol.slist.object(60).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(60).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(60).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40
+bild.topol.slist.object(61).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(61).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(61).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40
+bild.topol.slist.object(62).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(62).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(62).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.1
+bild.topol.slist.object(63).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(63).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(63).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.7
+bild.topol.slist.object(64).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(64).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(64).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.7
+bild.topol.slist.object(65).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(65).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(65).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50
+bild.topol.slist.object(66).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(66).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(66).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50
+bild.topol.slist.object(67).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(67).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(67).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50
+bild.topol.slist.object(68).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(68).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(68).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50
+bild.topol.slist.object(69).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(69).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(69).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.23
+bild.topol.slist.object(70).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(70).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(70).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.23
+bild.topol.slist.object(71).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(71).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(71).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.23
+bild.topol.slist.object(72).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(72).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(72).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 38.5
+bild.topol.slist.object(73).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(73).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(73).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 38.5
+bild.topol.slist.object(74).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(74).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(74).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 38.5
+bild.topol.slist.object(75).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(75).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(75).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.87
+bild.topol.slist.object(76).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(76).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(76).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.87
+bild.topol.slist.object(77).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(77).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(77).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.87
+bild.topol.slist.object(78).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(78).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(78).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.87
+bild.topol.slist.object(79).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(79).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(79).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 60
+bild.topol.slist.object(80).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(80).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(80).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 42.2
+bild.topol.slist.object(81).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(81).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(81).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 42.2
+bild.topol.slist.object(82).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(82).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(82).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 28.8
+bild.topol.slist.object(83).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(83).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(83).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.6
+bild.topol.slist.object(84).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(84).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(84).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.6
+bild.topol.slist.object(85).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(85).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(85).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.6
+bild.topol.slist.object(86).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(86).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(86).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40
+bild.topol.slist.object(87).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(87).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(87).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(88).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(88).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(88).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(89).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(89).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(89).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(90).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(90).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(90).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.4
+bild.topol.slist.object(91).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(91).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(91).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.2
+bild.topol.slist.object(92).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(92).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(92).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.2
+bild.topol.slist.object(93).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(93).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(93).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.2
+bild.topol.slist.object(94).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(94).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(94).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 37.7
+bild.topol.slist.object(95).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(95).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(95).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 42.8
+bild.topol.slist.object(96).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(96).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(96).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 42.8
+bild.topol.slist.object(97).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(97).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(97).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 64.4
+bild.topol.slist.object(98).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(98).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(98).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 64.4
+bild.topol.slist.object(99).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(99).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(99).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 46.7
+bild.topol.slist.object(100).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(100).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(100).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 46.7
+bild.topol.slist.object(101).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(101).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(101).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 28.8
+bild.topol.slist.object(102).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(102).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(102).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 74
+bild.topol.slist.object(103).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(103).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(103).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 74
+bild.topol.slist.object(104).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(104).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(104).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(105).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(105).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 74
+bild.topol.slist.object(105).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 45.5
+bild.topol.slist.object(106).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(106).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(106).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 45.5
+bild.topol.slist.object(107).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(107).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(107).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 82.22
+bild.topol.slist.object(108).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(108).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(108).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.1
+bild.topol.slist.object(109).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(109).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(109).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.2
+bild.topol.slist.object(110).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(110).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(110).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.4
+bild.topol.slist.object(111).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(111).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(111).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.4
+bild.topol.slist.object(112).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(112).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(112).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.1
+bild.topol.slist.object(113).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(113).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(113).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.1
+bild.topol.slist.object(114).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(114).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(114).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 73.3
+bild.topol.slist.object(115).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(115).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(115).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57.7
+bild.topol.slist.object(116).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(116).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(116).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.5
+bild.topol.slist.object(117).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(117).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(117).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.7
+bild.topol.slist.object(118).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(118).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(118).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.2
+bild.topol.slist.object(119).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(119).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(119).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.2
+bild.topol.slist.object(120).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(120).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(120).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 86.6
+bild.topol.slist.object(121).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(121).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(121).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.4
+bild.topol.slist.object(122).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(122).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(122).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.4
+bild.topol.slist.object(123).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(123).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(123).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.1
+bild.topol.slist.object(124).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(124).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(124).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.1
+bild.topol.slist.object(125).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(125).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(125).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 28.8
+bild.topol.slist.object(126).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(126).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(126).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 74.4
+bild.topol.slist.object(127).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(127).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(127).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 74.4
+bild.topol.slist.object(128).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(128).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(128).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.1
+bild.topol.slist.object(129).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(129).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(129).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.1
+bild.topol.slist.object(130).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(130).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(130).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 31.1
+bild.topol.slist.object(131).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(131).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(131).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 80
+bild.topol.slist.object(132).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(132).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(132).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 68.8
+bild.topol.slist.object(133).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(133).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(133).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 66.6
+bild.topol.slist.object(134).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(134).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(134).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 9.4
+bild.topol.slist.object(135).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(135).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(135).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 9.6
+bild.topol.slist.object(136).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(136).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(136).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57
+bild.topol.slist.object(137).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(137).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(137).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57
+bild.topol.slist.object(138).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(138).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(138).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57
+bild.topol.slist.object(139).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(139).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(139).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 15.5
+bild.topol.slist.object(140).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(140).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(140).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.1
+bild.topol.slist.object(141).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(141).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(141).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.1
+bild.topol.slist.object(142).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(142).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(142).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.4
+bild.topol.slist.object(143).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(143).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(143).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.4
+bild.topol.slist.object(144).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(144).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(144).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.5
+bild.topol.slist.object(145).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(145).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(145).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.5
+bild.topol.slist.object(146).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(146).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(146).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.9
+bild.topol.slist.object(147).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(147).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(147).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.9
+bild.topol.slist.object(148).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(148).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(148).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.9
+bild.topol.slist.object(149).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(149).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(149).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 68.8
+bild.topol.slist.object(150).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(150).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(150).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57.8
+bild.topol.slist.object(151).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(151).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(151).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 57.8
+bild.topol.slist.object(152).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(152).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(152).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 36.4
+bild.topol.slist.object(153).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(153).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(153).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.4
+bild.topol.slist.object(154).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(154).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(154).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 6.7
+bild.topol.slist.object(155).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(155).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(155).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40.5
+bild.topol.slist.object(156).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(156).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(156).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.4
+bild.topol.slist.object(157).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(157).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(157).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 69.4
+bild.topol.slist.object(158).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(158).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(158).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.3
+bild.topol.slist.object(159).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(159).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(159).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 7
+bild.topol.slist.object(160).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(160).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(160).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.2
+bild.topol.slist.object(161).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(161).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(161).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70
+bild.topol.slist.object(162).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(162).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(162).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 70
+bild.topol.slist.object(163).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(163).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(163).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.2
+bild.topol.slist.object(164).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(164).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(164).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.2
+bild.topol.slist.object(165).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(165).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(165).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.2
+bild.topol.slist.object(166).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(166).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(166).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 8.7
+bild.topol.slist.object(167).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(167).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(167).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 29.4
+bild.topol.slist.object(168).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(168).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(168).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50.1
+bild.topol.slist.object(169).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(169).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(169).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50.1
+bild.topol.slist.object(170).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(170).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(170).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 60.6
+bild.topol.slist.object(171).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(171).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(171).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 27.3
+bild.topol.slist.object(172).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(172).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(172).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 10.5
+bild.topol.slist.object(173).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(173).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(173).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 11.9
+bild.topol.slist.object(174).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(174).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(174).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.15
+bild.topol.slist.object(175).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(175).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(175).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 48.15
+bild.topol.slist.object(176).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(176).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(176).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.6
+bild.topol.slist.object(177).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(177).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(177).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 39.5
+bild.topol.slist.object(178).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(178).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(178).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 6
+bild.topol.slist.object(179).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(179).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(179).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 58
+bild.topol.slist.object(180).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(180).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(180).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 58
+bild.topol.slist.object(181).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(181).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(181).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20.8
+bild.topol.slist.object(182).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(182).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(182).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 44.7
+bild.topol.slist.object(183).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(183).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(183).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 47.1
+bild.topol.slist.object(184).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(184).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(184).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 47.1
+bild.topol.slist.object(185).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(185).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(185).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 22.6
+bild.topol.slist.object(186).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(186).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(186).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 6.4
+bild.topol.slist.object(187).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(187).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(187).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20.3
+bild.topol.slist.object(188).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(188).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(188).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 21
+bild.topol.slist.object(189).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(189).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(189).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 58.55
+bild.topol.slist.object(190).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 0.75
+bild.topol.slist.object(190).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(190).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 58.55
+bild.topol.slist.object(191).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(191).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(191).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.85
+bild.topol.slist.object(192).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(192).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(192).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.85
+bild.topol.slist.object(193).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(193).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(193).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56
+bild.topol.slist.object(194).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(194).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(194).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56
+bild.topol.slist.object(195).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(195).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(195).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.2
+bild.topol.slist.object(196).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(196).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(196).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56.93
+bild.topol.slist.object(197).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(197).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(197).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56.93
+bild.topol.slist.object(198).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(198).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(198).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 56.94
+bild.topol.slist.object(199).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(199).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(199).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 58
+bild.topol.slist.object(200).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(200).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(200).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 58
+bild.topol.slist.object(201).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(201).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(201).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 50
+bild.topol.slist.object(202).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(202).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(202).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 43
+bild.topol.slist.object(203).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(203).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(203).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.3
+bild.topol.slist.object(204).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(204).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(204).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 44.3
+bild.topol.slist.object(205).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(205).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(205).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 24.5
+bild.topol.slist.object(206).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(206).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(206).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 31.4
+bild.topol.slist.object(207).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(207).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(207).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 51.5
+bild.topol.slist.object(208).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(208).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(208).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.5
+bild.topol.slist.object(209).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(209).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(209).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 36.4
+bild.topol.slist.object(210).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(210).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(210).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 17.5
+bild.topol.slist.object(211).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(211).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(211).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 62.53
+bild.topol.slist.object(212).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(212).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(212).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 62.53
+bild.topol.slist.object(213).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(213).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(213).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 62.54
+bild.topol.slist.object(214).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(214).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(214).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 6.8
+bild.topol.slist.object(215).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(215).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(215).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.33
+bild.topol.slist.object(216).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(216).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(216).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.33
+bild.topol.slist.object(217).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(217).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(217).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.34
+bild.topol.slist.object(218).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(218).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(218).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.7
+bild.topol.slist.object(219).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(219).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(219).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.7
+bild.topol.slist.object(220).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(220).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(220).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.5
+bild.topol.slist.object(221).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(221).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(221).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.5
+bild.topol.slist.object(222).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(222).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(222).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40.8
+bild.topol.slist.object(223).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(223).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(223).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 40.8
+bild.topol.slist.object(224).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(224).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(224).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69
+bild.topol.slist.object(225).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(225).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(225).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.1
+bild.topol.slist.object(226).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(226).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(226).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.5
+bild.topol.slist.object(227).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(227).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(227).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.5
+bild.topol.slist.object(228).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(228).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(228).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 71.5
+bild.topol.slist.object(229).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(229).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(229).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 19.3
+bild.topol.slist.object(230).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(230).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(230).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63.63
+bild.topol.slist.object(231).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(231).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(231).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 63.63
+bild.topol.slist.object(232).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(232).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(232).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 63.64
+bild.topol.slist.object(233).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(233).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(233).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 35
+bild.topol.slist.object(234).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(234).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(234).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.26
+bild.topol.slist.object(235).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(235).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(235).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(236).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.27
+bild.topol.slist.object(236).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(236).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 54.27
+bild.topol.slist.object(237).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(237).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(237).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.7
+bild.topol.slist.object(238).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(238).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(238).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 55.7
+bild.topol.slist.object(239).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(239).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(239).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 52.2
+bild.topol.slist.object(240).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(240).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(240).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.3
+bild.topol.slist.object(241).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(241).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(241).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 61.7
+bild.topol.slist.object(242).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(242).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(242).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 41.05
+bild.topol.slist.object(243).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(243).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(243).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(244).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(244).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 41.05
+bild.topol.slist.object(244).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.23
+bild.topol.slist.object(245).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(245).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(245).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.23
+bild.topol.slist.object(246).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(246).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(246).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 51.24
+bild.topol.slist.object(247).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(247).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(247).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 67.65
+bild.topol.slist.object(248).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(248).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(248).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 67.65
+bild.topol.slist.object(249).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(249).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(249).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(250).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1.75
+bild.topol.slist.object(250).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(250).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 30
+bild.topol.slist.object(251).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(251).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(251).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 30
+bild.topol.slist.object(252).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(252).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(252).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 75
+bild.topol.slist.object(253).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(253).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(253).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 75
+bild.topol.slist.object(254).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(254).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(254).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(255).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(255).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(255).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 66.6
+bild.topol.slist.object(256).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.5
+bild.topol.slist.object(256).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(256).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 66.6
+bild.topol.slist.object(257).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.5
+bild.topol.slist.object(257).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(257).geo.append(tobj)
+}
+{
+tobj = new GeoSpec(2)
+tobj.value = 66.8
+bild.topol.slist.object(258).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.5
+bild.topol.slist.object(258).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(258).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(259).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(259).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(259).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(260).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(260).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 100
+bild.topol.slist.object(260).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 100
+bild.topol.slist.object(261).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 1
+bild.topol.slist.object(261).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(261).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 20
+bild.topol.slist.object(262).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 2
+bild.topol.slist.object(262).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(262).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 73
+bild.topol.slist.object(263).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(263).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(263).geo.append(tobj)
+tobj = new GeoSpec(2)
+tobj.value = 69.9
+bild.topol.slist.object(264).geo.append(tobj)
+tobj = new GeoSpec(3)
+tobj.value = 0.75
+bild.topol.slist.object(264).geo.append(tobj)
+tobj = new GeoSpec(7)
+tobj.value = 0.1
+bild.topol.slist.object(264).geo.append(tobj)
+set_default()
+}
+{object_pop()}
+{
+}
+{object_push(memb)}
+{first=0}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(0).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cadyn")
+tobj.set("depth_cadyn", 1, 0)
+tobj.set("taur_cadyn", 100, 0)
+tobj.set("cainf_cadyn", 0.0001, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("hd")
+tobj.set("ghdbar_hd", 0.0003, 0)
+tobj.set("vhalfl_hd", -90, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.0005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.04, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("na3Mig")
+tobj.set("sh_na3Mig", 0, 0)
+tobj.set("gbar_na3Mig", 0.0052085, 0)
+tobj.set("ar2_na3Mig", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(1).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cadyn")
+tobj.set("depth_cadyn", 1, 0)
+tobj.set("taur_cadyn", 100, 0)
+tobj.set("cainf_cadyn", 0.0001, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("hd")
+tobj.set("ghdbar_hd", 0.0003, 0)
+tobj.set("vhalfl_hd", -90, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.0005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.04, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("na3Mig")
+tobj.set("sh_na3Mig", 0, 0)
+tobj.set("gbar_na3Mig", 0.0052085, 0)
+tobj.set("ar2_na3Mig", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(2).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.192
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.2712e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cadyn")
+tobj.set("depth_cadyn", 1, 0)
+tobj.set("taur_cadyn", 100, 0)
+tobj.set("cainf_cadyn", 0.0001, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("hd")
+tobj.set("ghdbar_hd", 0.0003, 0)
+tobj.set("vhalfl_hd", -90, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.0005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.04, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("na3Mig")
+tobj.set("sh_na3Mig", 0, 0)
+tobj.set("gbar_na3Mig", 0.0052085, 0)
+tobj.set("ar2_na3Mig", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.06, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(4).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 1.1e-05, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(4).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.06, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(5).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 1.1e-05, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(5).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("nap")
+tobj.set("gbar_nap", 0, 0)
+tobj.set("timestauh_nap", 1, 0)
+tobj.set("timestaum_nap", 1, 0)
+tobj.set("shifttaum_nap", 1, 0)
+tobj.set("shifttauh_nap", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KM")
+tobj.set("gMbar_KM", 0.004, 0)
+tobj.set("timesTau_KM", 3, 0)
+tobj.set("plusTau_KM", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.025, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.02, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naxMig")
+tobj.set("sh_naxMig", 0, 0)
+tobj.set("gbar_naxMig", 0.08, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naIn")
+tobj.set("gbar_naIn", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(6).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("car")
+tobj.set("PcaRbar_car", 4.4e-05, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cat")
+tobj.set("PcaTbar_cat", 1.1e-05, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("CAl")
+tobj.set("PcalBar_CAl", 6.622e-05, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("CAnpq")
+tobj.set("PcanpqBar_CAnpq", 0.000154, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("cadyn")
+tobj.set("depth_cadyn", 1, 0)
+tobj.set("taur_cadyn", 1, 0)
+tobj.set("cainf_cadyn", 0.0001, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KCT")
+tobj.set("gCTbar_KCT", 0.01, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("nap")
+tobj.set("gbar_nap", 0.001, 0)
+tobj.set("timestauh_nap", 50, 0)
+tobj.set("timestaum_nap", 1, 0)
+tobj.set("shifttaum_nap", 1, 0)
+tobj.set("shifttauh_nap", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("ca2dyn")
+tobj.set("depth_ca2dyn", 1, 0)
+tobj.set("taur_ca2dyn", 1000, 0)
+tobj.set("ca2inf_ca2dyn", 0.0001, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KAHP")
+tobj.set("gAHPbar_KAHP", 0.0007, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KM")
+tobj.set("gMbar_KM", 0.002, 0)
+tobj.set("timesTau_KM", 3, 0)
+tobj.set("plusTau_KM", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("hd")
+tobj.set("ghdbar_hd", 5e-05, 0)
+tobj.set("vhalfl_hd", -90, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kaG")
+tobj.set("gbar_kaG", 0.005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("na3Mig")
+tobj.set("sh_na3Mig", 0, 0)
+tobj.set("gbar_na3Mig", 0.1, 0)
+tobj.set("ar2_na3Mig", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naIn")
+tobj.set("gbar_naIn", 0.00075, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(0).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(1).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(1).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.4286e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(1).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(2).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(2).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.4286e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(2).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(3).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(3).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.4286e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(3).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(4).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(4).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(4).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(5).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(5).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(5).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(6).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(6).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(6).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(7).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(7).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(7).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(8).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(8).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(8).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(9).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(9).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(9).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(10).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(10).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(10).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(11).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(11).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(11).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(12).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(12).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(12).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(13).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(13).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(13).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(14).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(14).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(14).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(15).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(15).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(15).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(16).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(16).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(16).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(17).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(17).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(17).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(18).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(18).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(18).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(19).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(19).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(19).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(20).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(20).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(20).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(21).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(21).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(21).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(22).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(22).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(22).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(23).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(23).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(23).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(24).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(24).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(24).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(25).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(25).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(25).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(26).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(26).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(26).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(100).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(100).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(100).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(101).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(101).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(101).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(102).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(102).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(102).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(103).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(103).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(103).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(104).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(104).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(104).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(105).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(105).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(105).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(106).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(106).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(106).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(107).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(107).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(107).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(108).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(108).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(108).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(109).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(109).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(109).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(110).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(110).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(110).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(111).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(111).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(111).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(112).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(112).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(112).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(113).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(113).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(113).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(114).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(114).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(114).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(115).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(115).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(115).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(116).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(116).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(116).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(117).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(117).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(117).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(118).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(118).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(118).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(119).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(119).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(119).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(120).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(120).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(120).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(121).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(121).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(121).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(122).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(122).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(122).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(123).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(123).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(123).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(124).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(124).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(124).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(125).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(125).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(125).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(126).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(126).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(126).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(127).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(127).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(127).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(128).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(128).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(128).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(129).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(129).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(129).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(130).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(130).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(130).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(131).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(131).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(131).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(132).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(132).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(132).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(133).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(133).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(133).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(134).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.937
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(134).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.7857e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(134).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(135).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(135).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.4286e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(135).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(136).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(136).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 1.4286e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(136).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KM")
+tobj.set("gMbar_KM", 0.004, 0)
+tobj.set("timesTau_KM", 3, 0)
+tobj.set("plusTau_KM", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("nap")
+tobj.set("gbar_nap", 0.0005, 0)
+tobj.set("timestauh_nap", 1, 0)
+tobj.set("timestaum_nap", 1, 0)
+tobj.set("shifttaum_nap", 1, 0)
+tobj.set("shifttauh_nap", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naxMig")
+tobj.set("sh_naxMig", -3.5, 0)
+tobj.set("gbar_naxMig", 0.1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.02, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naIn")
+tobj.set("gbar_naIn", 0.0005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(250).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("KM")
+tobj.set("gMbar_KM", 0.004, 0)
+tobj.set("timesTau_KM", 3, 0)
+tobj.set("plusTau_KM", 0, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naxMig")
+tobj.set("sh_naxMig", -7, 0)
+tobj.set("gbar_naxMig", 0.1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("kdrG")
+tobj.set("gbar_kdrG", 0.025, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("naIn")
+tobj.set("gbar_naIn", 0.0005, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("nap")
+tobj.set("gbar_nap", 0.0005, 0)
+tobj.set("timestauh_nap", 1, 0)
+tobj.set("timestaum_nap", 1, 0)
+tobj.set("shifttaum_nap", 1, 0)
+tobj.set("shifttauh_nap", 1, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(251).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(252).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(252).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(252).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(253).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(253).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(253).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(254).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(254).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(254).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(255).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(255).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0.001, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(255).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(256).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(256).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(256).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(257).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(257).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(257).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(258).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(258).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(258).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(259).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(259).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0.001, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(259).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(260).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(260).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(260).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(261).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.1
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(261).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2e-06, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(261).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 100
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(262).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 0.75
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(262).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 0.001, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(262).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(263).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(263).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(263).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(0)
+tobj.value = 150
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(264).ml.append(tobj)
+}
+{
+tobj = new FakeMechStan(1)
+tobj.value = 1.144
+tobj.set_default()
+tobj = new MStanWrap(tobj, 0)
+bild.topol.slist.object(264).ml.append(tobj)
+}
+{
+tobj = new MechanismStandard("pas")
+tobj.set("g_pas", 2.1786e-05, 0)
+tobj.set("e_pas", -70, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.topol.slist.object(264).ml.append(tobj)
+}
+{object_pop()}
+{
+}
+{object_push(manage)}
+{
+first = 0
+classname = "Cell"
+etop=1 esub=1 egeom=1 emem=1
+itop=1 isub=0 igeom=0 imem=0
+bild.topol.names_off = 0
+bild.topol.circles_off = 0
+output_index = 0  output_x = 1
+thresh = 10
+}
+{object_pop()}
+{
+cexport()
+}
+{object_pop()}
+{
+save_window_=ocbox_.gtopol
+save_window_.size(-200,200,-150,150)
+scene_vector_[2] = save_window_
+ocbox_.gtopol = save_window_
+save_window_.save_name("ocbox_.gtopol")
+}
+{
+ocbox_.map("CellBuild[0]", 153, 24, 829.8, 747.9)
+}
+objref ocbox_
+//End CellBuild[0]
+
+objectvar scene_vector_[1]
+{doNotify()}

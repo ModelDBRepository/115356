@@ -1,0 +1,106 @@
+//loads the morphology
+
+load_file("model.ses")
+//some enviroment and computation parameters
+
+stdrun = 1
+steps_per_ms = 10 
+celsius = 30 
+tstop = 120
+dt = 0.01
+
+cai0_ca_ion = 5e-6
+cao0_ca_ion = 2
+
+cai0_ca2_ion = 5e-6
+cao0_ca2_ion = 2
+
+v_init = -75
+
+//inserts a current clamp in the soma
+
+access soma
+
+objectvar stim
+
+stim = new IClamp(0.5)
+
+stim.del = 100
+stim.dur = 4
+stim.amp = 0.89 // 1 for zero shift
+
+objref somav, ahv, isav
+
+//records the membrane voltage at the soma and at the first two segments of the axon
+
+somav = new Vector(12000) //soma
+ahv = new Vector(12000) //axon hillock
+isav = new Vector(12000) //initial segment od the axon
+
+somav.record(&soma.v(0.5), dt)
+ahv.record(&AH.v(0.5), dt)
+isav.record(&isa.v(0.5), dt)
+
+objref all
+
+all = new File()
+
+strdef datei
+
+//  the voltage shift and the density of the axonal sodium channel
+
+AH.sh_naxMig = -3.5 //0 for zero shift
+isa.sh_naxMig = -7 // 0 for zero shift
+AH.gbar_naxMig = 0.1 //same as in soma
+isa.gbar_naxMig = 0.1 //same as in soma
+
+nrncontrolmenu()
+newPlotV()
+
+xpanel("RoyeckEtAl 2008")
+  xlabel("Re-create figure 11D (left)")
+  xlabel("The first button runs at a coarse resolution of dt = 0.05 ms")
+  xlabel("The second button runs at pulication resolution of dt = 0.01 ms")
+  xlabel("The lower button test runs for just 2ms (rather than 120)")
+  xlabel("")
+  xbutton("Demo Simulation/graph", "run_sim_graph_coarse()")
+  xbutton("Run Simulation/graph then write file", "run_sim_graph()")
+  xbutton("Short test run","short_test()")
+xpanel()
+
+proc run_sim_graph_coarse() {
+    dt = 0.05
+    init()
+    run()
+}
+
+proc run_sim_graph() {
+    dt = 0.01
+    print "running simulation please wait"
+    init()
+    run()
+    print "writing data file of soma, axon hillock, and initial segment voltages"
+    write_file()
+    print "done"
+}
+
+proc write_file() {
+    sprint(datei, "outputfilename") 
+    all.wopen(datei)
+
+    for i=0, somav.size()-1 {
+        all.printf("%g %g %g \r\n", somav.x(i), ahv.x(i), isav.x(i))
+    }
+
+    all.close
+}
+// quit()
+
+proc short_test() {
+    save_tstop=tstop
+    tstop=2
+    init()
+    run()
+    print "short test completed"
+    tstop=save_tstop
+}
